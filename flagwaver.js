@@ -1,12 +1,4 @@
 
-
-/*
- * Aug 9 2012
- *
- * Its Singapore's National Day, so
- * Making a quick tweaks to simulate the Singapore flag in the wind
- */
-
 /*
  * Aug 3 2012
  *
@@ -1030,8 +1022,6 @@
         camera.position.z = 2000;
         scene.add( camera );
 
-        // Init lights
-        scene.add( new THREE.AmbientLight( 0xffffff ) );
 
 
         // Init flag pole
