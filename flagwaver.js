@@ -287,8 +287,8 @@
 
 
         // Public properties and methods
-        this.xSegs        = xSegs*2;
-        this.ySegs        = ySegs*2;
+        this.xSegs        = xSegs;
+        this.ySegs        = ySegs;
         this.width        = width;
         this.height       = height;
         this.restDistance = restDistance;
@@ -393,8 +393,8 @@
 
     // Default flag options
     var defaultOptions = {
-        width         : 1200,
-        height        : 800,
+        width         : 600,
+        height        : 400,
         mass          : MASS,
         levelOfDetail : 10
     };
