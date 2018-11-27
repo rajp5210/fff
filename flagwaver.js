@@ -1005,8 +1005,8 @@
     //
 
     // Renderer settings
-    var poleOffset  = 300,
-        poleHeight  = 1000;
+    var poleOffset  = 0,
+        poleHeight  = 0;
 
     // Renderer variables
     var vertexShader, fragmentShader,
@@ -1038,26 +1038,6 @@
         camera.position.z = 2000;
         scene.add( camera );
 
-        // Init lights
-        scene.add( new THREE.AmbientLight( 0x222222 ) );
-        light = new THREE.DirectionalLight( 0xffffff, 1.75 );
-        light.color.setHSL( 0.6, 1, 0.9375 );
-        light.position.set( 50, 175, 100 );
-        light.position.multiplyScalar( 1.3 );
-        light.castShadow      = true;
-        light.shadowMapWidth  = 2048;
-        light.shadowMapHeight = 2048;
-        light.shadowCameraTop    = d = 300;
-        light.shadowCameraLeft   = -d;
-        light.shadowCameraBottom = -d;
-        light.shadowCameraRight  = d;
-        light.shadowCameraFar    = 1000;
-        light.shadowDarkness     = 0.5;
-        scene.add( light );
-        light = new THREE.DirectionalLight( 0xffffff, 0.35 );
-        light.color.setHSL( 0.3, 0.5, 0.75 );
-        light.position.set( 0, -1, 0 );
-        scene.add( light );
 
         // Init flag pole
         poleGeo = new THREE.CylinderGeometry( 6, 6, poleHeight );
