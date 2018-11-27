@@ -562,7 +562,7 @@
                 '\n\t' + 'Aspect ratio: ' +
                     window.Number( ( srcWidth / srcHeight ).toFixed( 4 ) )
             );
-            ctx.fillStyle = '#ff00ff';
+            ctx.fillStyle = '#fff';
             ctx.fillRect( 0, 0, canvas.width, canvas.height );
         }
 
@@ -594,7 +594,7 @@
         this.material = new THREE.MeshPhongMaterial( {
             alphaTest : 0.5,
             color     : 0xffffff,
-            specular  : 0x030303,
+            specular  : 0xffffff,
             shininess : 0.001, // https://github.com/mrdoob/three.js/issues/7252
             metal     : false,
             side      : THREE.DoubleSide
