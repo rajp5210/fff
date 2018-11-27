@@ -1012,7 +1012,7 @@
 
 
         // Init camera
-        camera = new THREE.PerspectiveCamera(
+        var camera = new THREE.PerspectiveCamera(
             30,
             window.innerWidth / window.innerHeight,
             1,
