@@ -285,6 +285,54 @@
             }
         }
 
+        // Bend
+
+        // var wlen = restDistance * 2,
+        //     hlen = restDistance * 2;
+
+        // diagonalDist = window.Math.sqrt( wlen * wlen + hlen * hlen );
+
+        // for ( v = 0; v < ySegs - 1; v++ ) {
+        //     for ( u = 0; u < xSegs - 1; u++ ) {
+
+        //         constraints.push( new Constraint(
+        //             particles[ index( u, v ) ],
+        //             particles[ index( u + 2, v ) ],
+        //             wlen
+        //         ) );
+
+        //         constraints.push( new Constraint(
+        //             particles[ index( u, v ) ],
+        //             particles[ index( u, v + 2 ) ],
+        //             hlen
+        //         ) );
+
+        //         constraints.push( new Constraint(
+        //             particles[ index( u, v ) ],
+        //             particles[ index( u + 2, v + 2 ) ],
+        //             diagonalDist
+        //         ) );
+
+        //         constraints.push( new Constraint(
+        //             particles[ index( u, v + 2 ) ],
+        //             particles[ index( u + 2, v + 2 ) ],
+        //             wlen
+        //         ) );
+
+        //         constraints.push( new Constraint(
+        //             particles[ index( u + 2, v + 2 ) ],
+        //             particles[ index( u + 2, v + 2 ) ],
+        //             hlen
+        //         ) );
+
+        //         constraints.push( new Constraint(
+        //             particles[ index( u + 2,  v ) ],
+        //             particles[ index( u , v + 2 ) ],
+        //             diagonalDist
+        //         ) );
+
+        //     }
+        // }
 
         // Public properties and methods
         this.xSegs        = xSegs;
@@ -393,8 +441,8 @@
 
     // Default flag options
     var defaultOptions = {
-        width         : 600,
-        height        : 400,
+        width         : 300,
+        height        : 200,
         mass          : MASS,
         levelOfDetail : 10
     };
@@ -957,8 +1005,8 @@
     //
 
     // Renderer settings
-    var poleOffset  = 000,
-        poleHeight  = 000;
+    var poleOffset  = 300,
+        poleHeight  = 1000;
 
     // Renderer variables
     var vertexShader, fragmentShader,
