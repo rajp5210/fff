@@ -287,8 +287,8 @@
 
 
         // Public properties and methods
-        this.xSegs        = xSegs;
-        this.ySegs        = ySegs;
+        this.xSegs        = xSegs*2;
+        this.ySegs        = ySegs*2;
         this.width        = width;
         this.height       = height;
         this.restDistance = restDistance;
