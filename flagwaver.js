@@ -393,8 +393,8 @@
 
     // Default flag options
     var defaultOptions = {
-        width         : 600,
-        height        : 400,
+        width         : 1200,
+        height        : 800,
         mass          : MASS,
         levelOfDetail : 10
     };
@@ -957,8 +957,8 @@
     //
 
     // Renderer settings
-    var poleOffset  = 300,
-        poleHeight  = 1000;
+    var poleOffset  = 000,
+        poleHeight  = 000;
 
     // Renderer variables
     var vertexShader, fragmentShader,
