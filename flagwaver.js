@@ -1,9 +1,4 @@
-**
- * Flag Waver
- *
- * Simulate a flag waving in the breeze right in your browser window.
- *
- */
+
 
 /*
  * Aug 9 2012
