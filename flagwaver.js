@@ -1,4 +1,4 @@
-/**
+**
  * Flag Waver
  *
  * Simulate a flag waving in the breeze right in your browser window.
@@ -562,7 +562,7 @@
                 '\n\t' + 'Aspect ratio: ' +
                     window.Number( ( srcWidth / srcHeight ).toFixed( 4 ) )
             );
-            ctx.fillStyle = '#fff';
+            ctx.fillStyle = '#ff00ff';
             ctx.fillRect( 0, 0, canvas.width, canvas.height );
         }
 
@@ -594,7 +594,7 @@
         this.material = new THREE.MeshPhongMaterial( {
             alphaTest : 0.5,
             color     : 0xffffff,
-            specular  : 0xffffff,
+            specular  : 0x030303,
             shininess : 0.001, // https://github.com/mrdoob/three.js/issues/7252
             metal     : false,
             side      : THREE.DoubleSide
@@ -1005,8 +1005,8 @@
     //
 
     // Renderer settings
-    var poleOffset  = 0,
-        poleHeight  = 0;
+    var poleOffset  = 300,
+        poleHeight  = 1000;
 
     // Renderer variables
     var vertexShader, fragmentShader,
@@ -1022,10 +1022,7 @@
         vertexShader   = document.getElementById( 'vertexShaderDepth' ).textContent;
         fragmentShader = document.getElementById( 'fragmentShaderDepth' ).textContent;
 
-        // Init scene
-        scene     = new THREE.Scene();
-        scene.fog = new THREE.Fog( 0x000000, 1000, 10000 );
-        scene.fog.color.setHSL( 0.6, 1, 0.9 );
+
 
         // Init camera
         camera = new THREE.PerspectiveCamera(
@@ -1038,20 +1035,21 @@
         camera.position.z = 2000;
         scene.add( camera );
 
+        // Init lights
+        scene.add( new THREE.AmbientLight( 0xffffff ) );
+
 
         // Init flag pole
         poleGeo = new THREE.CylinderGeometry( 6, 6, poleHeight );
         poleMat = new THREE.MeshPhongMaterial( {
-            color     : 0x6A6A6A,
+            color     : 0xffffff,
             specular  : 0xffffff,
             metal     : true,
-            shininess : 18
+            shininess : 0
         } );
         poleMesh = new THREE.Mesh( poleGeo, poleMat );
         poleMesh.position.y    = poleOffset - poleHeight / 2;
         poleMesh.position.x    = -4;
-        poleMesh.receiveShadow = true;
-        poleMesh.castShadow    = true;
         scene.add( poleMesh );
 
         // Init renderer object
